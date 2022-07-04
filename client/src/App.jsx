@@ -1,15 +1,26 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import RegistrationInputs from './pages/registration/components/RegistrationInputs';
+import FriendsList from './pages/friends_list/components/friends_page';
+import './styles/App.css';
 
-import './App.css';
-
-function Registration() {
-  useEffect(() => {
-    axios.post('http://localhost:4200/api/getter/registration', {login: "Lukashevich", password: "Nikita"}).then(res => console.log(res));
-  })
+function App() {
   return (
-    <h1>Test</h1>
+    <>
+    <header>
+      <nav>
+        <ul className='nav-list'>
+          <li><Link to="/registration">Registration</Link></li>
+          <li><Link to="/friends">Friends</Link></li>
+        </ul>
+      </nav>
+    </header>
+    <Routes>
+      <Route path="/registration" element={<RegistrationInputs />} />
+      <Route path="/friends" element={<FriendsList />} />
+    </Routes>
+    </>
   );
 }
 
-export default Registration;
+export default App ;
