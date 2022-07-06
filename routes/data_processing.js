@@ -22,4 +22,8 @@ router.get('/users', async (req, res) => {
     console.log('Данные отправлены')
 })
 
+router.delete('/delete/:id', async(req, res) => {
+    database.splice(req.params.id , 1);
+})
+
 module.exports = router

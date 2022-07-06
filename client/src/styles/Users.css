@@ -3,7 +3,43 @@
     padding: 0 auto;
 }
 
-.user-item-wrapper {
+.users-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.user-buttons {
     display: flex;
     gap: 10px;
+}
+
+.user-item-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+.user-item-delete-button {
+    background-color: lightcoral;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.user-item-delete-button:hover {
+    transform: scale(1.1);
+}
+
+.user-item-update-button {
+    background-color: lightskyblue;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.user-item-update-button:hover {
+    transform: scale(1.1);
 }
