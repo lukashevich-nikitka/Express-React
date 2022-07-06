@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import RegistrationInputs from './pages/registration/components/RegistrationInputs';
-import FriendsList from './pages/friends_list/components/friends_page';
+import FriendsList from './pages/friends_list/components/friends_list';
 import './styles/App.css';
 
 function App() {

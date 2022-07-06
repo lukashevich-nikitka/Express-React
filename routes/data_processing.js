@@ -17,4 +17,9 @@ router.post('/registration', async (req, res) => {
     res.send('Пользователь зарегистрирован');
 })
 
+router.get('/users', async (req, res) => {
+    res.send([...database]);
+    console.log('Данные отправлены')
+})
+
 module.exports = router
