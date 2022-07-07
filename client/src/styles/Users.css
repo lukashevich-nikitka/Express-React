@@ -43,3 +43,13 @@
 .user-item-update-button:hover {
     transform: scale(1.1);
 }
+
+.edit-input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-input {
+    width: 100px;
+    height: 30px;
+}
