@@ -5,9 +5,12 @@ function UserItem(props) {
   const [newName, setNewName] = useState('');
   const [newSurname, setNewSurname] = useState('');
   const [editClick, setEditClick] = useState(true);
-  const { name, surname, id } = props;
+  const {
+    name, surname, id, renderUserList,
+  } = props;
   const deleteUser = function () {
     axios.delete(`http://localhost:4200/api/getter/delete/${id}`);
+    renderUserList();
   };
   const editUser = function () {
     setEditClick(false);
@@ -17,6 +20,7 @@ function UserItem(props) {
       newLogin: newName,
       newPassword: newSurname,
     });
+    renderUserList();
     setEditClick(true);
   };
   const rewriteName = (event) => setNewName(event.target.value);
